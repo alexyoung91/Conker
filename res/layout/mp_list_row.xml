@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+ 
+    <!-- Project Thumbnail -->
+    <LinearLayout android:id="@+id/project_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+ 
+        <ImageView
+            android:id="@+id/thumbnail_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/no_image"/>
+ 
+    </LinearLayout>
+ 
+    <!-- Project Title -->
+    <TextView
+        android:id="@+id/project_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/project_thumbnail"
+        android:layout_toRightOf="@id/project_thumbnail"
+        android:text="PROJECT TITLE"
+        android:textColor="#141414"
+        android:typeface="sans"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    
+    <!-- Project Author -->
+    <!--TextView
+        android:id="@+id/project_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/project_title"
+        android:gravity="right"
+        android:text="PROJECT AUTHOR"
+        android:layout_marginRight="5dip"
+        android:textSize="12sp"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"/-->
+ 
+    <!-- Project Description -->
+    <TextView
+        android:id="@+id/project_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/project_title"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/project_thumbnail"
+        android:text="PROJECT DESCRIPTION" />
+    
+    <ImageView
+            android:id="@+id/project_location_image"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_toRightOf="@id/project_thumbnail"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_action_place"/>
+    
+    <!-- Project Location -->
+    <TextView
+        android:id="@+id/project_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@id/project_location_image"
+        android:layout_alignParentBottom="true"
+        android:text="PROJECT LOCATION" />
+ 
+     <!-- Rightend Arrow -->
+     <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+ 
+</RelativeLayout>

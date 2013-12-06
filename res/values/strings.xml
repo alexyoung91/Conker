@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conker</string>
+    <string name="action_search">Search</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_share">Share</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_logo">Logo</string>
+    <string name="edit_email">Email</string>
+    <string name="edit_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="text_register">Register <u>here</u></string>
+    <string name="edit_name">Project Name</string>
+    <string name="edit_desc">Project Description</string>
+    <string name="button_addphoto">Add Photo</string>
+    <string name="text_location">Location</string>
+    <string name="button_loc_auto">Automatic</string>
+    <string name="button_loc_manual">Manual</string>
+    <string name="button_post">Post</string>
+    <string name="button_clear">Clear</string>
+    <string name="title_activity_home_screen">Conker</string>
+    <string name="title_activity_register">Register</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_project">Conker</string>
+
+</resources>

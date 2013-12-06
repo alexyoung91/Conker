@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.alexyoung91.communistore"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="net.alexyoung91.communistore.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.alexyoung91.communistore.HomeScreenActivity"
+            android:label="@string/title_activity_home_screen"
+            android:parentActivityName="net.alexyoung91.communistore.LoginActivity" >
+
+            <!-- Below xml is needed to support android platforms below 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.alexyoung91.communistore.LoginActivity" />
+        </activity>
+        <activity
+            android:name="net.alexyoung91.communistore.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="net.alexyoung91.communistore.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.alexyoung91.communistore.LoginActivity" />
+        </activity>
+        <activity
+            android:name="net.alexyoung91.communistore.ProjectActivity"
+            android:label="@string/title_activity_project"
+            android:parentActivityName="net.alexyoung91.communistore.HomeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.alexyoung91.communistore.HomeScreenActivity" />
+        </activity>
+    </application>
+
+</manifest>
