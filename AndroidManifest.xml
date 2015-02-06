@@ -33,7 +33,7 @@
             <!-- Below xml is needed to support android platforms below 4.1 -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.alexyoung91.communistore.LoginActivity" />
+                android:value="co.conker.android.LoginActivity" />
         </activity>
         <activity
             android:name="co.conker.android.RegisterActivity"
@@ -41,7 +41,7 @@
             android:parentActivityName="co.conker.android.LoginActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.alexyoung91.communistore.LoginActivity" />
+                android:value="co.conker.android.LoginActivity" />
         </activity>
         <activity
             android:name="co.conker.android.ProjectActivity"
@@ -49,7 +49,7 @@
             android:parentActivityName="co.conker.android.HomeScreenActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.alexyoung91.communistore.HomeScreenActivity" />
+                android:value="co.conker.android.HomeScreenActivity" />
         </activity>
     </application>
 

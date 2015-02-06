@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 
 public class LoginActivity extends Activity {
-	public final static String EXTRA_EMAIL = "net.alexyoung91.communistore.EXTRA_EMAIL";
-	public final static String EXTRA_PASSWORD = "net.alexyoung91.communistore.EXTRA_PASSWORD";
+	public final static String EXTRA_EMAIL = "co.conker.android.EXTRA_EMAIL";
+	public final static String EXTRA_PASSWORD = "co.conker.android.EXTRA_PASSWORD";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
