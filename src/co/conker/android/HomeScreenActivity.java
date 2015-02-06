@@ -1,4 +1,4 @@
-package net.alexyoung91.communistore;
+package co.conker.android;
 
 
 import android.app.ActionBar;

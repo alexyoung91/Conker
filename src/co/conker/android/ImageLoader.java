@@ -1,4 +1,4 @@
-package net.alexyoung91.communistore;
+package co.conker.android;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
- 
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,4 +1,4 @@
-package net.alexyoung91.communistore;
+package co.conker.android;
 
 import java.io.IOException;
 import java.io.InputStream;

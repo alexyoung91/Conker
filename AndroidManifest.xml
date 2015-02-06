@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.alexyoung91.communistore"
+    package="co.conker.android"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="net.alexyoung91.communistore.LoginActivity"
+            android:name="co.conker.android.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="net.alexyoung91.communistore.HomeScreenActivity"
+            android:name="co.conker.android.HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
-            android:parentActivityName="net.alexyoung91.communistore.LoginActivity" >
+            android:parentActivityName="co.conker.android.LoginActivity" >
 
             <!-- Below xml is needed to support android platforms below 4.1 -->
             <meta-data
@@ -36,17 +36,17 @@
                 android:value="net.alexyoung91.communistore.LoginActivity" />
         </activity>
         <activity
-            android:name="net.alexyoung91.communistore.RegisterActivity"
+            android:name="co.conker.android.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName="net.alexyoung91.communistore.LoginActivity" >
+            android:parentActivityName="co.conker.android.LoginActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.alexyoung91.communistore.LoginActivity" />
         </activity>
         <activity
-            android:name="net.alexyoung91.communistore.ProjectActivity"
+            android:name="co.conker.android.ProjectActivity"
             android:label="@string/title_activity_project"
-            android:parentActivityName="net.alexyoung91.communistore.HomeScreenActivity" >
+            android:parentActivityName="co.conker.android.HomeScreenActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.alexyoung91.communistore.HomeScreenActivity" />
