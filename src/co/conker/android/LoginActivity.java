@@ -11,13 +11,13 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.PersistentCookieStore;
 
 public class LoginActivity extends Activity {
 	public final static String EXTRA_EMAIL = "co.conker.android.EXTRA_EMAIL";
@@ -35,10 +35,6 @@ public class LoginActivity extends Activity {
 		EditText editTextEmail = (EditText)findViewById(R.id.edit_email);
 		EditText editTextPassword = (EditText)findViewById(R.id.edit_password); // TODO: change field from text to email? Is this an option?
 		
-		// debug defaults
-		//editTextEmail.setText("test@example.com");
-		//editTextPassword.setText("pass123");
-		
 		String email = editTextEmail.getText().toString();
 		String password = editTextPassword.getText().toString();
 		
@@ -55,12 +51,11 @@ public class LoginActivity extends Activity {
 	    	 */
 	    	
 			AsyncHttpClient client = new AsyncHttpClient();
-			client.post(
-				this.getApplicationContext(),
-				"http://192.168.1.4:8080/login",
-				new StringEntity(requestObject.toString()),
-				"application/json",
-				new AsyncHttpResponseHandler() {
+			PersistentCookieStore cookieStore = new PersistentCookieStore(this);
+			client.setCookieStore(cookieStore);
+			
+			client.post(this.getApplicationContext(), "http://192.168.0.10:8080/login",
+				new StringEntity(requestObject.toString()), "application/json", new AsyncHttpResponseHandler() {
 
 			    @Override
 			    public void onStart() {
@@ -77,7 +72,8 @@ public class LoginActivity extends Activity {
 						boolean status = responseObject.getBoolean("status");
 						if (status) {
 							Intent intent = new Intent(getApplicationContext(), HomeScreenActivity.class);
-							// TODO: pass variables below - how to access?
+							// TODO: pass variables below - how to access? send back in request, access another way?
+							// do they need to be stored?
 							//intent.putExtra(EXTRA_EMAIL, email);
 							//intent.putExtra(EXTRA_PASSWORD, password);
 							startActivity(intent);
@@ -94,6 +90,8 @@ public class LoginActivity extends Activity {
 			    @Override
 			    public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
 			        // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+			    	Toast toast = Toast.makeText(getApplicationContext(), "Error logging in", Toast.LENGTH_SHORT);
+			    	toast.show();
 			    }
 
 			    @Override

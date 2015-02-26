@@ -21,5 +21,11 @@
         android:icon="@drawable/ic_action_settings"
         android:title="@string/action_settings"
         android:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_logout"
+        android:showAsAction="never" />
 
 </menu>
